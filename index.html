@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <title>SZIN Programszerkesztő</title>
+</head>
+<body>
+    <h1>SZIN Programszerkesztő</h1>
+
+    <h2>Programok:</h2>
+    <p id="tabla"></p>
+
+    <h2>Szerkesztés:</h2>
+    <form id="formSzerkesztes" onsubmit="return false;">
+        <fieldset>
+            <legend>Elvégezni kívánt művelet: </legend>
+
+            <label for="radioModosit">Előadó módosítása</label>
+            <input type="radio" name="muvelet" id="radioModosit" checked>
+            <label for="radioTorol">Előadó törlése</label>
+            <input type="radio" name="muvelet" id="radioTorol"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Nap:</legend>
+
+            <select id="changeNap" required>
+                <option value="0">Szerda</option>
+                <option value="1">Csütörtök</option>
+                <option value="2">Péntek</option>
+                <option value="3">Szombat</option>
+            </select>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Időpont:</legend>
+
+            <select id="changeIdopont" required>
+                <option value="0">16:30 - 17:30</option>
+                <option value="1">18:00 - 19:00</option>
+                <option value="2">19:30 - 20:30</option>
+                <option value="3">21:00 - 22:00</option>
+            </select>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Új előadó (módosítás esetén):</legend>
+            <input type="text" id="textUjeloado" required>
+        </fieldset>
+
+        <button type="submit" id="buttonInditas">Indítás</button>
+    </form>
+</body>
+</html>
